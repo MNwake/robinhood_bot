@@ -39,11 +39,7 @@ To test this application, you need the following:
   - `ROBINHOOD_API_KEY`: Your Robinhood API key
   - `ROBINHOOD_PRIVATE_KEY`: Your private key for Robinhood authentication
 
-Set the environment variables:
-```bash
-export API_KEY="your_api_key_here"
-export PRIVATE_KEY="your_private_key_here"
-
+---
 
 ## 📈 Usage
 
