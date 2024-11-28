@@ -1,0 +1,67 @@
+<MainScreenView>:
+    name: "main_screen"
+    md_bg_color: 'white'
+
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: '12dp'
+        spacing: '12dp'
+
+        MDTopAppBar:
+            type: 'small'
+
+            MDTopAppBarTitle:
+                text: "Trading Bot Dashboard"
+                pos_hint: {"center_x": .5}
+
+            MDTopAppBarTrailingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    id: start_stop_button
+                    icon: "play-circle-outline" if not root.model.is_bot_running else "stop-circle-outline"
+                    on_release: root.start_stop_button()
+
+        MDBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            padding_y: '12dp'
+
+            MDLabel:
+                text: f"BTC Price: {root.btc_price}"
+                size_hint_x: 1
+
+            MDLabel:
+                text: f"ETH Price: {root.eth_price}"
+                size_hint_x: 1
+
+        MDBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            spacing: '24dp'
+            padding_y: '12dp'
+
+            MDLabel:
+                text: f"USD Balance: {root.usd_balance}"
+                size_hint_x: 1
+
+            MDLabel:
+                text: f"BTC Balance: {root.btc_balance}"
+                size_hint_x: 1
+
+            MDLabel:
+                text: f"ETH Balance: {root.eth_balance}"
+                size_hint_x: 1
+            MDLabel:
+                text: f'Total Balance: {root.total_balance}'
+
+
+        MDLabel:
+            text: "Trade History"
+            halign: "center"
+            size_hint_y: None
+            height: dp(40)
+            theme_text_color: "Primary"
+
+        ScrollView:
+            MDList:
+                id: trade_history_list
