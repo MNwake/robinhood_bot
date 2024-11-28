@@ -79,6 +79,18 @@ class TradingBotModel:
         self._eth_prices.append(price)
         self._trigger_callback()
 
+    def get_last_trade_price(self, symbol, action):
+        """
+        Get the price of the last trade for the given symbol and action (BUY or SELL).
+        :param symbol: The symbol of the asset (e.g., "BTC" or "ETH").
+        :param action: The type of trade (e.g., "BUY" or "SELL").
+        :return: The price of the last trade or None if no such trade exists.
+        """
+        for trade in reversed(self._trade_history):  # Iterate from most recent to oldest
+            if trade.symbol == symbol and trade.action.upper() == action.upper():
+                return trade.price
+        return None
+
     def _trigger_callback(self):
         if self._callback:
             self._callback()
