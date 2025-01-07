@@ -1,4 +1,4 @@
-from View.MainScreen.main_screen import MainScreenView
+from view.main_screen.main_screen import MainScreenView
 from services.trading_bot import TradingBot
 
 

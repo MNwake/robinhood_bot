@@ -1,6 +1,6 @@
 from kivy.clock import Clock
 
-from Model.base_model import BaseScreenModel
+from model.base_model import BaseScreenModel
 from modules.trading_bot_model import TradingBotModel
 
 

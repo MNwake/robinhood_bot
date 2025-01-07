@@ -1,7 +1,7 @@
 from kivy.properties import StringProperty, ListProperty
 from kivymd.uix.list import MDListItem, MDListItemHeadlineText, MDListItemSupportingText, MDListItemTertiaryText
 
-from View.base_screen import BaseScreenView
+from view.base_screen import BaseScreenView
 
 
 class MainScreenView(BaseScreenView):

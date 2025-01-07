@@ -8,7 +8,8 @@ from modules.moving_average import MovingAverageStrategy
 from modules.percentage_base import PercentageBasedStrategy
 from modules.trade_history import TradeHistoryModel
 from modules.trading_utils import get_best_bid_ask
-from robinhood_api_trading import CryptoAPITrading
+from services.robinhood_api_trading import CryptoAPITrading
+
 
 
 class TradingBot:
