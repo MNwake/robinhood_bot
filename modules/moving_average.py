@@ -1,9 +1,8 @@
-import logging
-
 from collections import deque
 
-from logging_config import logger
-from modules.trading_utils import TradingStrategy, calculate_position_size
+from config.logging_config import logger
+from modules.trading_utils import TradingStrategy
+
 
 class MovingAverageStrategy(TradingStrategy):
     def __init__(self, short_window, long_window, model, record_trade_callback, required_profit_percent=1.0):

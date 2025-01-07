@@ -1,10 +1,6 @@
-import time
-import logging
 from abc import ABC, abstractmethod
-from typing import Any
-import requests
 
-from logging_config import logger
+from config.logging_config import logger
 
 
 # Trade execution logic with slippage simulation

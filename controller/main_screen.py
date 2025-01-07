@@ -1,5 +1,5 @@
 from View.MainScreen.main_screen import MainScreenView
-from trading_bot import TradingBot
+from services.trading_bot import TradingBot
 
 
 class MainScreenController:

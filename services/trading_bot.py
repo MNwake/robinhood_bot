@@ -3,7 +3,7 @@ from datetime import datetime
 from threading import Thread
 
 import pytz
-from logging_config import logger
+from config.logging_config import logger
 from modules.moving_average import MovingAverageStrategy
 from modules.percentage_base import PercentageBasedStrategy
 from modules.trade_history import TradeHistoryModel
@@ -91,8 +91,6 @@ class TradingBot:
             symbol_balance=symbol_balance,
         )
         self.model.add_trade(trade)
-
-    import time
 
     def fetch_live_prices(self, symbol):
         """

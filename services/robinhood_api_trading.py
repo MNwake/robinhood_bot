@@ -8,13 +8,14 @@ import requests
 from dotenv import load_dotenv
 from nacl.signing import SigningKey
 
+from config.config import Config
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Access the variables
-API_KEY = os.getenv("API_KEY")
-PRIVATE_KEY = os.getenv("PRIVATE_KEY")
+API_KEY = Config.API_KEY
+PRIVATE_KEY = Config.PRIVATE_KEY
 
 
 class CryptoAPITrading:

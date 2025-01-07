@@ -1,4 +1,4 @@
-from logging_config import logger
+from config.logging_config import logger
 from modules.trading_utils import TradingStrategy
 
 class PercentageBasedStrategy(TradingStrategy):
